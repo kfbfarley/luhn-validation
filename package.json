@@ -1,0 +1,60 @@
+{
+  "name": "luhn-validation",
+  "version": "1.0.4",
+  "description": "A full TypeScript EAN, UPC, IMEI, EID, ISBN & card validation tool",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "ean",
+    "ean-checker",
+    "ean-validation",
+    "ean-validator",
+    "upc",
+    "upc-checker",
+    "upc-validation",
+    "upc-validator",
+    "imei",
+    "imei-checker",
+    "imei-validation",
+    "imei-validator",
+    "eid",
+    "eid-checker",
+    "eid-validation",
+    "eid-validator",
+    "isbn",
+    "isbn-checker",
+    "isbn-validation",
+    "isbn-validator",
+    "validator",
+    "validation",
+    "luhn",
+    "luhn-algorithm",
+    "luhn-checksum"
+  ],
+  "author": "@kfbfarley",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.1.2",
+    "jest": "^29.1.2",
+    "prettier": "^2.7.1",
+    "ts-jest": "^29.0.3",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0"
+  },
+  "dependencies": {
+    "big-integer": "^1.6.51",
+    "install": "^0.13.0",
+    "npm": "^8.19.2"
+  }
+}
